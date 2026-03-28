@@ -1,0 +1,175 @@
+{
+  "name": "BookTracker - Трекер книг",
+  "short_name": "BookTracker",
+  "description": "Відстежуйте прочитані книги, ставте цілі та читайте прямо в додатку",
+  "version": "1.0.0",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#667eea",
+  "theme_color": "#667eea",
+  "lang": "uk",
+  "dir": "ltr",
+  "categories": ["books", "education", "productivity"],
+  
+  "icons": [
+    {
+      "src": "icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  
+  "screenshots": [
+    {
+      "src": "screenshots/home.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Головна сторінка"
+    },
+    {
+      "src": "screenshots/library.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Бібліотека"
+    },
+    {
+      "src": "screenshots/reader.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Читалка"
+    }
+  ],
+  
+  "shortcuts": [
+    {
+      "name": "Додати книгу",
+      "short_name": "Додати",
+      "description": "Швидко додати нову книгу",
+      "url": "/?action=add-book",
+      "icons": [
+        {
+          "src": "icons/shortcut-add.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Моя бібліотека",
+      "short_name": "Бібліотека",
+      "description": "Відкрити бібліотеку",
+      "url": "/?page=library",
+      "icons": [
+        {
+          "src": "icons/shortcut-library.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Продовжити читання",
+      "short_name": "Читати",
+      "description": "Продовжити останню книгу",
+      "url": "/?action=continue-reading",
+      "icons": [
+        {
+          "src": "icons/shortcut-read.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  
+  "share_target": {
+    "action": "/?action=share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "book",
+          "accept": ["application/epub+zip", ".epub", "application/pdf", ".pdf", "text/plain", ".txt"]
+        }
+      ]
+    }
+  },
+  
+  "file_handlers": [
+    {
+      "action": "/?action=open-file",
+      "accept": {
+        "application/epub+zip": [".epub"],
+        "application/pdf": [".pdf"],
+        "text/plain": [".txt"],
+        "application/x-fictionbook+xml": [".fb2"]
+      }
+    }
+  ],
+  
+  "protocol_handlers": [
+    {
+      "protocol": "web+book",
+      "url": "/?book=%s"
+    }
+  ],
+  
+  "related_applications": [],
+  "prefer_related_applications": false,
+  
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
