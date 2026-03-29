@@ -1,15 +1,24 @@
 {
-  "name": "Мої Книги",
-  "short_name": "Книги",
-  "start_url": "./index.html",
+  "name": "BookShelf — Моя бібліотека",
+  "short_name": "BookShelf",
+  "description": "Читай, відмічай, відкривай нові книги",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#007aff",
+  "background_color": "#1a1a2e",
+  "theme_color": "#e94560",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "icon.png",
+      "src": "https://via.placeholder.com/192x192/e94560/ffffff?text=📚",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://via.placeholder.com/512x512/e94560/ffffff?text=📚",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
